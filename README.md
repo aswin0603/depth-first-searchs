@@ -83,7 +83,10 @@ for i in range(e):
     graph[u].append(v)
     graph[v].append(u)
 # print(graph)
-start = "A"
+if '0' in graph:
+    start = '0'
+else:
+    start = 'A'
 visited = defaultdict(bool)
 path = []
 traversedpath = dfs(graph, start, visited, path)
